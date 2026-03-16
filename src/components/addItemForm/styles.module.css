@@ -1,0 +1,115 @@
+.wrapper {
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.title {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 200px;
+  gap: 16px;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23666' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+}
+
+.button {
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: #4d8f00;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background: #3f7700;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .button {
+    grid-column: span 1;
+  }
+
+  .input,
+  .button {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .field label {
+    font-size: 13px;
+  }
+}
